@@ -1,39 +1,39 @@
 # C-SCAN Analysis
 
-Repositório para versionamento de código utilizado no relatório da disciplina de Sistemas Operacionais sobre o algoritmo C-SCAN.
-É possível fornecer as seguintes características do disco como parâmetros:
+Repository for versioning code used in the Operating Systems course report on the C-SCAN algorithm.
+It is possible to provide the following disk characteristics as parameters:
 
-- Tamanho do setor
-- Número de trilhas
-- Número de setores por trilhas
-- Taxa de transferência
-- Tempo de busca (seek time)
-- Tempo de rotação (rotation time)
-- Setor inicial
+- Sector size
+- Number of tracks
+- Number of sectors per track
+- Transfer rate
+- Seek time
+- Rotation time
+- Initial sector
 
-Clique [aqui](https://docs.google.com/document/d/1yB46UXTxB3JjAze1ii0SP1VVJovRRW1g5hddzQgeCr4/edit?usp=sharing) para acessar o relatório.
+Click [here](https://docs.google.com/document/d/1yB46UXTxB3JjAze1ii0SP1VVJovRRW1g5hddzQgeCr4/edit?usp=sharing) to access the report.
 
-# Implementação
+# Implementation
 
-O algoritmo foi implementado na linguagem Java, seguindo conceitos de orientação a objetos e utilizando bibliotecas de estruturas de dados da linguagem como `java.util.ArrayList`.
-É utilizado o padrão à direita, buscando os setores realizando um movimento da esquerda para a direita.
+The algorithm was implemented in Java, following object-oriented concepts and using data structure libraries of the language such as `java.util.ArrayList`.
+It uses a right-hand pattern, searching the sectors by moving from left to right.
 
-Para comparações entre requisições randômicas e lineares e mais detalhes a respeito do funcionamento de um disco e do algoritmo, acesse o relatório do projeto.
+For comparisons between random and linear requests and more details about the functioning of a disk and the algorithm, access the project report.
 
-# Utilização
+# Usage
 
-Para executar o algoritmo, acesse a classe `./src/cscan/RunCSCAN.java`, modifique os parâmetros do disco e do sorteio randômico de requisições a seu critério e em seguida execute a
-função `main`.
+To run the algorithm, access the class `./src/cscan/RunCSCAN.java`, modify the disk parameters and the random request draw to your liking, and then execute the
+`main` function.
 
-O algoritmo consegue suportar até uma faixa de 14000 setores requisitados ao mesmo tempo. Para testar, modifique os parâmetros do sorteio aleatório de requisições na classe `RunCSCAN`
-(não recomendado, utilize valores menores).
+The algorithm can support up to a range of 14000 sectors requested at the same time. To test, modify the parameters of the random request draw in the `RunCSCAN` class
+(not recommended, use smaller values).
 
-> Caso a execução fique em loop infinito, muito provavelmente os valores fornecidos como parâmetros não estão corretos ou o usuário quis se aventurar com mais requisições do que o permitido.
+> If the execution gets stuck in an infinite loop, most likely the parameter values provided are not correct or the user wanted to venture with more requests than allowed.
 
-## Saída formatada
+## Formatted Output
 
-A saída no terminal segue o modelo mostrado abaixo, exibindo as requisições sorteadas, a ordem de acesso a cada setor com base nos parâmetros de disco, a posição inicial do cabeçote
-e o tempo total em milisegundos de toda a requisição.
+The output in the terminal follows the model shown below, displaying the drawn requests, the order of access to each sector based on the disk parameters, the initial head position
+and the total time in milliseconds of the entire request.
 
 ```
 Requests:
@@ -42,11 +42,10 @@ Requests:
 Accessed sectors:
 [33, 35, 24, 25, 26, 29, 30, 30, 7, 7, 7, 1, 1, 3, 15, 16, 18, 19, 22, 14]
 Initial head position: 31
-13,95 ms
+13.95 ms
 ```
 
-# Para os alunos
+# For the Students
 
-Este trabalho obteve uma nota 9.0 de 10.0. Podem utilizar o algoritmo e o documento como modelo para seus relatórios, mas, claro, "copia só não faz igual". Uma dica é mudar a linguagem, não usem Java,
-utilizem alguma linguagem de script mais simples como Python. A respeito dos gráficos, fiquem livres para escolher entre uma biblioteca de plotagem de gráfico da sua linguagem favorita ou usar as tabelas
-do Google Sheets como utilizei, são bem customizáveis e fáceis de utilizar.
+This work received a grade of 9.0 out of 10.0. You may use the algorithm and the document as a model for your reports, but, of course, "just don't copy it exactly". A tip is to change the language, don't use Java,
+use a simpler scripting language like Python. Regarding the graphs, feel free to choose between a graph plotting library of your favorite language or use Google Sheets tables as I did, they are very customizable and easy to use.
